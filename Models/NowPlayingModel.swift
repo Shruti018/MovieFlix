@@ -11,7 +11,7 @@ import Foundation
 struct NowPlayingModel: Codable
 {
     let id: Int?
-    let results: [PlayingResults]
+    var results: [PlayingResults]
 }
 
 // MARK: - Result

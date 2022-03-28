@@ -121,12 +121,12 @@ class ViewController: UIViewController {
     @IBAction func onClickDelete(_ sender: UIButton) {
         
         flixCollectionView.performBatchUpdates({ [self] in
-            arrResults.remove(at: sender.tag)
+            
+            self.dataSource.deleteRowUpdate(index: sender.tag)
             let indexPath = IndexPath(row: sender.tag, section: 0)
             flixCollectionView.deleteItems(at: [indexPath])
 
         }) { finished in
-            self.updateDataSource()
         }
         
     }

@@ -42,4 +42,9 @@ class FlixCollectionViewCellDataSource<CELL : UICollectionViewCell,T> : NSObject
         
     }
     
+    func deleteRowUpdate(index: Int) {
+        
+        items.remove(at: index)
+    }
+    
 }
